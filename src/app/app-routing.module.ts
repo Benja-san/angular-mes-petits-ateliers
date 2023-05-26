@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { QuotesCreatorComponent } from './quotes-creator/quotes-creator.component';
 import { CatalogComponent } from './catalog/catalog.component';
+import { WildersSearchComponent } from './wilders-search/wilders-search.component';
+import { WilderComponent } from './wilder/wilder.component';
 
 const routes: Routes = [
   {
@@ -16,6 +18,14 @@ const routes: Routes = [
   {
     path: 'catalog',
     component: CatalogComponent,
+  },
+  {
+    path: 'wilders-search',
+    component: WildersSearchComponent,
+  },
+  {
+    path: 'wilders-search/:wilderName',
+    component: WilderComponent,
   },
 ];
 
