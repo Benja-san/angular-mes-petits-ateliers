@@ -1,0 +1,10 @@
+<h2>Quotes creator</h2>
+<section>
+  <h3>{{ personality.name }}</h3>
+  <div>
+    <img src="{{ personality.image }}" alt="{{ personality.name }}" />
+  </div>
+  <p>{{ personality.title }}</p>
+  <q>{{ personality.quote }}</q>
+  <textarea [(ngModel)]="personality.quote"></textarea>
+</section>

@@ -1,0 +1,25 @@
+<h2>My online calculator</h2>
+
+<section>
+  <div>
+    <p>{{ firstNumber }}</p>
+    <button type="button" (click)="generateRandomNumber(1)">
+      Generate Number 1
+    </button>
+  </div>
+  <div>
+    <p>{{ operator ? operator : "choose operator" }}</p>
+    <ul>
+      <li *ngFor="for; let operator; of: operators">
+        <button (click)="giveResult(operator)" type="button">
+          {{ operator }}
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div>
+    {{ secondNumber }}
+    <button (click)="generateRandomNumber(2)">Generate Number 1</button>
+  </div>
+  <div>result = {{ result }}</div>
+</section>
