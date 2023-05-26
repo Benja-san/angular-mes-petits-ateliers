@@ -1,0 +1,47 @@
+<h1>My video games catalog!</h1>
+<section *ngIf="nonReleasedProducts.length > 0">
+  <h2>Non released products</h2>
+  <ul>
+    <li
+      *ngFor="let product of nonReleasedProducts"
+      id="article-{{ product.productID }}"
+    >
+      <article>
+        <h3>{{ product.name }}</h3>
+        <span>{{ product.price }}</span>
+        <p>{{ product.isOnSale ? "On sale !" : "Newest" }}</p>
+      </article>
+    </li>
+  </ul>
+</section>
+<section *ngIf="onSalesProducts.length > 0">
+  <h2>On sales products</h2>
+  <ul>
+    <li
+      *ngFor="let product of onSalesProducts"
+      id="article-{{ product.productID }}"
+    >
+      <article>
+        <h3>{{ product.name }}</h3>
+        <span>{{ product.price }}</span>
+        <p>{{ product.isOnSale ? "On sale !" : "Newest" }}</p>
+      </article>
+    </li>
+  </ul>
+</section>
+
+<section *ngIf="restOfProducts.length > 0">
+  <h2>Our catalog!</h2>
+  <ul>
+    <li
+      *ngFor="let product of restOfProducts"
+      id="article-{{ product.productID }}"
+    >
+      <article>
+        <h3>{{ product.name }}</h3>
+        <span>{{ product.price }}</span>
+        <p>{{ product.isOnSale ? "On sale !" : "Newest" }}</p>
+      </article>
+    </li>
+  </ul>
+</section>
